@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import StepOne from './Components/Step-One/StepOne';
 import Stepper from './Components/Stepper/Stepper';
 
 
@@ -13,10 +14,10 @@ class App extends React.Component {
     optionalSteps = {[1]}
     stepsContent = {
       [
-        "<h1>First Content</h1>",
-        "<h2>Second Content</h2>",
-        "<h3>Third Content</h3>",
-        "<h4>Fourth Content</h4>",
+        <StepOne/>,
+        "<h2>Second Step Content</h2>",
+        "<h3>Third Step Content</h3>",
+        "<h4>Fourth Step Content</h4>",
     ]
     }
     />

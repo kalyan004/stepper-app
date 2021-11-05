@@ -12,9 +12,15 @@ export default class Step extends Component {
                     "step-description-active"}`}
                     >{stepObj.label}</div>
                     <div>{stepObj.optional ? "Optional":""}</div>
-                    <div 
-                    className = {!isLastStep ?`divider-line` :""}>
+                    {stepObj.completed ? (
+                        <div
+                    className = {!isLastStep ? `divider-line divider-line-completed` :""}>
                     </div>
+                    ) : (
+                        <div
+                    className = {!isLastStep ? `divider-line` :""}>
+                    </div>
+                    )}
                 </div>
                 
             );
