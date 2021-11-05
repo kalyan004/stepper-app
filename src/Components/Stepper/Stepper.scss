@@ -1,0 +1,52 @@
+.stepper-container {
+    border: 1px solid lightsalmon;
+    border-radius: 3px;
+    margin: 40px auto;
+    padding: 30px;
+    width: 60%;
+    box-shadow: 0 0 13px #333;
+}
+.buttons-container {
+    button {
+        margin: 0 2rem;
+        border: none;
+        color: blue;
+        background: transparent;
+        text-transform: uppercase; 
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.75;
+        letter-spacing: 0.02857em;
+        text-transform: uppercase;
+        min-width: 64px;
+        padding: 6px 8px;
+        border-radius: 4px;
+    }
+
+    button:disabled {
+        color:#ccc;
+        cursor: no-drop;
+        pointer-events: none;
+    }
+    button:hover {
+        background-color: azure;
+    }
+   
+}
+
+.button-leftcontainer {
+    display: inline-block;
+    margin-left: 13rem;
+}
+
+.button-rightcontainer {
+    float: right;
+    margin-right:13rem;
+}
+.content {
+    margin-left: 20%;
+    padding-bottom: 3rem;
+}
+.button-skip-div{
+    float: left;
+}

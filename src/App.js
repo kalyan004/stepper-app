@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Stepper from './Components/Stepper/Stepper';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  render () { 
+    return (<Stepper 
+    steps = {["Step One",
+    "Step Two",
+    "Step Three",
+    "Step Four"]}
+    optionalSteps = {[1]}
+    stepsContent = {
+      [
+        "<h1>First Content</h1>",
+        "<h2>Second Content</h2>",
+        "<h3>Third Content</h3>",
+        "<h4>Fourth Content</h4>",
+    ]
+    }
+    />
+    )
+  }
 }
-
 export default App;
