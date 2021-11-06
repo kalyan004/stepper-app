@@ -18,6 +18,7 @@ class App extends React.Component {
         "<h2>Second Step Content</h2>",
         "<h3>Third Step Content</h3>",
         "<h4>Fourth Step Content</h4>",
+        "<div>Finished Content</div>"
     ]
     }
     />

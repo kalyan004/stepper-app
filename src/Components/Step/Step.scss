@@ -1,4 +1,6 @@
-$step-number-background-color :#1976d2;
+$step-number-active-background-color :#1976d2;
+$step-number-disabled-background-color : rgba(0, 0, 0, 0.38);
+$color-white :#fff;
 .stepper-wrapper {
     display: flex;
     justify-content: center;
@@ -34,13 +36,13 @@ $step-number-background-color :#1976d2;
 }
 
 .step-number-active {
-    background: $step-number-background-color;
-    color: #fff;
+    background: $step-number-active-background-color;
+    color: $color-white;
 }
 .step-number-disabled {
     border: 1px solid #838383;
-    background-color: rgba(0, 0, 0, 0.38);
-    color: #fff;
+    background-color:$step-number-disabled-background-color;
+    color:$color-white;
 }
 .step-description-active {
     font-weight: bold;

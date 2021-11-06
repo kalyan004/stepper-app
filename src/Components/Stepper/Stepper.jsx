@@ -23,24 +23,30 @@ export default class Stepper extends Component {
       
     }
      getStepContent(activeStep){
-      if(activeStep === this.state.stepsObjs.length){
+      let content = this.state.stepsContents[activeStep];
+      if(activeStep > 0 && activeStep === this.state.stepsObjs.length){
+        console.log('activeStep :',activeStep);
+        if(content){
+          return this.getStepContentOfProp(content);    
+        }
         return (<div>All steps completed - you're finished</div>);
       }
       if(this.state.stepsContents && this.state.stepsContents.length > 0){
-        let content = this.state.stepsContents[activeStep];
-        console.log(typeof content);
-        if(typeof content === "object"){
-          return <div>{content}</div>
-        }
-        else{
-          return (<div dangerouslySetInnerHTML={{__html: content}}/>)
-        }
-       
+        return this.getStepContentOfProp(content);    
       }
       else{
         return (<div>Step {activeStep+1}</div>);
       }
 
+    }
+
+    getStepContentOfProp(content){
+      if(typeof content === "object"){
+        return <div>{content}</div>
+      }
+      else{
+        return (<div dangerouslySetInnerHTML={{__html: content}}/>)
+      }
     }
 
      prepareStatesObj (activeStep,skipped){
